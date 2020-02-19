@@ -1,7 +1,7 @@
 <template>
   <div class="section">
-    <h1>{{ $t('main.software') }}</h1>
-    {{ software.software }}
+    <h1>{{ $t('main.talks') }}</h1>
+    {{ talks.talks }}
   </div>
 </template>
 
@@ -10,13 +10,13 @@ import { mapActions, mapState } from 'vuex'
 
 export default {
   computed: {
-    ...mapState(['software'])
+    ...mapState(['talks'])
   },
   mounted() {
-    this.fetchSoftware()
+    this.fetchTalks()
   },
   methods: {
-    ...mapActions('software', ['fetchSoftware'])
+    ...mapActions('talks', ['fetchTalks'])
   }
 }
 </script>

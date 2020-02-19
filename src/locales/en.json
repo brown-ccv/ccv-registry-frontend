@@ -1,6 +1,7 @@
 {
   "main": {
     "workshops": "Workshops",
-    "software": "Software"
+    "software": "Software",
+    "talks": "Talks"
   }
 }

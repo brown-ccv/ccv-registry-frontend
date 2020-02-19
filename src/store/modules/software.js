@@ -3,18 +3,18 @@ import GithubService, { query, serialize } from '@/services/GithubService'
 export default {
   namespaced: true,
   state: {
-    workshops: []
+    software: []
   },
   mutations: {
-    SET_WORKSHOP_DATA(state, payload) {
-      state.workshops = payload
+    SET_SOFTWARE_DATA(state, payload) {
+      state.software = payload
     }
   },
   actions: {
-    fetchWorkshops({ commit }) {
-      GithubService.getData(query('workshops'))
+    fetchSoftware({ commit }) {
+      GithubService.getData(query('software'))
         .then(response => {
-          commit('SET_WORKSHOP_DATA', serialize(response))
+          commit('SET_SOFTWARE_DATA', serialize(response))
         })
         .catch(error => {
           console.log(error)

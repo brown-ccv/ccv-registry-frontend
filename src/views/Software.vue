@@ -1,7 +1,11 @@
 <template>
   <div class="section">
     <h1>{{ $t('main.software') }}</h1>
-    {{ software.software }}
+    <Card
+      v-for="(item, index) in software.software"
+      :key="index"
+      :model="item"
+    ></Card>
   </div>
 </template>
 

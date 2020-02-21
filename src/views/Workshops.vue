@@ -1,11 +1,13 @@
 <template>
   <div class="section">
     <h1>{{ $t('main.workshops') }}</h1>
-    <Card
-      v-for="(item, index) in workshops.workshops"
-      :key="index"
-      :model="item"
-    ></Card>
+    <CardGroup>
+      <Card
+        v-for="(item, index) in workshops.workshops"
+        :key="index"
+        :model="item"
+      ></Card>
+    </CardGroup>
   </div>
 </template>
 

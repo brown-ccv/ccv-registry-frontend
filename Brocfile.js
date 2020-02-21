@@ -16,4 +16,6 @@ const appDarkStyles = compileSass(
 const minStyles = new CleanCss(appStyles)
 const minDarkStyles = new CleanCss(appDarkStyles)
 
-export default () => merge([minStyles, minDarkStyles])
+const solarizedLight = new CleanCss('src/styles/highlight/')
+
+export default () => merge([minStyles, minDarkStyles, solarizedLight])

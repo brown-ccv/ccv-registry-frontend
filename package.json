@@ -19,6 +19,7 @@
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
     "vue-i18n": "^8.0.0",
+    "vue-markdown": "^2.2.4",
     "vue-router": "^3.1.5",
     "vuex": "^3.1.2",
     "yaml": "^1.7.2"
@@ -53,6 +54,7 @@
     "sass": "^1.25.0",
     "sass-loader": "^8.0.2",
     "vue-cli-plugin-i18n": "^0.6.1",
+    "vue-svg-loader": "^0.16.0",
     "vue-template-compiler": "^2.6.11"
   },
   "config": {

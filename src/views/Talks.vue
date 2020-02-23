@@ -1,8 +1,8 @@
 <template>
   <div class="section">
-    <h1>{{ $t('main.software') }}</h1>
+    <h1>{{ $t('main.talks') }}</h1>
     <Card
-      v-for="(item, index) in software.software"
+      v-for="(item, index) in talks.talks"
       :key="index"
       :model="item"
     ></Card>
@@ -14,13 +14,13 @@ import { mapActions, mapState } from 'vuex'
 
 export default {
   computed: {
-    ...mapState(['software'])
+    ...mapState(['talks'])
   },
   mounted() {
-    this.fetchSoftware()
+    this.fetchTalks()
   },
   methods: {
-    ...mapActions('software', ['fetchSoftware'])
+    ...mapActions('talks', ['fetchTalks'])
   }
 }
 </script>

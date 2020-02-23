@@ -1,13 +1,13 @@
 <template>
   <div>
-    <router-link
-      v-if="model.details"
-      :to="{
-        name: 'workshop',
-        params: { slug: model.slug, details: model.details }
-      }"
-    >
-      <div class="item-card">
+    <div class="item-card">
+      <router-link
+        v-if="model.details"
+        :to="{
+          name: 'workshop',
+          params: { slug: model.slug, details: model.details }
+        }"
+      >
         <div class="card-image">
           <figure class="image is-4by3">
             <img
@@ -27,8 +27,8 @@
             {{ model.description }}
           </div>
         </div>
-      </div>
-    </router-link>
+      </router-link>
+    </div>
   </div>
 </template>
 

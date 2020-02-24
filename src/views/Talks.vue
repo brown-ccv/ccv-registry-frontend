@@ -1,6 +1,8 @@
 <template>
   <div class="section">
-    <h1>{{ $t('main.talks') }}</h1>
+    <Hero title="Talks and Conferences" :subtitle="$t('description.talks')">
+      <HeroImage option="presentation" />
+    </Hero>
     <Card
       v-for="(item, index) in talks.talks"
       :key="index"

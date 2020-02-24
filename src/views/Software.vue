@@ -1,6 +1,8 @@
 <template>
   <div class="section">
-    <h1>{{ $t('main.software') }}</h1>
+    <Hero title="Software" :subtitle="$t('description.software')">
+      <HeroImage option="code-review" />
+    </Hero>
     <Card
       v-for="(item, index) in software.software"
       :key="index"

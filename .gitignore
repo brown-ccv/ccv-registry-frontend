@@ -11,6 +11,7 @@ geckodriver.log
 .env.local
 .env.*.local
 .env 
+.npmrc
 
 # Log files
 npm-debug.log*

@@ -3,5 +3,8 @@
     "workshops": "Workshops",
     "software": "Software",
     "talks": "Talks"
+  },
+  "description": {
+    "workshops": "Data Science, High-performance computing, Computational Biology workshops and tutorials."
   }
 }

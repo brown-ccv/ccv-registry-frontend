@@ -1,5 +1,5 @@
 <template>
-  <a :href="url" class="github-link">
+  <a :href="url" class="small">
     <font-awesome-icon
       class="fa-icon"
       :icon="['fab', 'github']"

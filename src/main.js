@@ -4,16 +4,23 @@ import router from './router'
 import store from './store'
 import i18n from './i18n'
 
+// add moment
+import moment from 'moment'
+Vue.prototype.moment = moment
+
+// import nprogress css
 import 'nprogress/nprogress.css'
 
 // Fontawesome imports and registration
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faUserFriends } from '@fortawesome/pro-duotone-svg-icons'
+import { faCalendarDay } from '@fortawesome/pro-duotone-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 library.add(faGithub)
 library.add(faUserFriends)
+library.add(faCalendarDay)
 
 // Global components imports and registration
 import Authors from '@/components/Authors'
@@ -25,6 +32,7 @@ import Hero from '@/components/Hero'
 import HeroImage from '@/components/HeroImage'
 import Menu from '@/components/Menu'
 import Navbar from '@/components/Navbar'
+import NextDate from '@/components/NextDate'
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('Authors', Authors)
@@ -36,6 +44,7 @@ Vue.component('Hero', Hero)
 Vue.component('HeroImage', HeroImage)
 Vue.component('Menu', Menu)
 Vue.component('Navbar', Navbar)
+Vue.component('NextDate', NextDate)
 
 Vue.config.productionTip = false
 

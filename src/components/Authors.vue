@@ -1,5 +1,5 @@
 <template>
-  <div class="authors">
+  <div class="small">
     <font-awesome-icon
       class="fa-icon"
       :icon="['fad', 'user-friends']"

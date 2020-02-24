@@ -13,6 +13,7 @@
           <p class="title is-4">{{ model.name }}</p>
           <GithubLink :repo="repo" :url="model.repo" />
           <Authors :authors="model.authors" />
+          <NextDate :v-if="model.happening_next" :date="model.happening_next" />
         </div>
       </div>
 

@@ -11,15 +11,43 @@
         <div class="media-content">
           <span class="tag is-primary">{{ model.category }}</span>
           <p class="title is-4">{{ model.name }}</p>
-          <GithubLink :repo="repo" :url="model.repo" />
-          <Authors :authors="model.authors" />
-          <NextDate :v-if="model.happening_next" :date="model.happening_next" />
+          <IconText prefix="fab" iconName="github">
+            <a :href="model.repo"> {{ repo }} </a>
+          </IconText>
+          <IconText prefix="fad" iconName="user-friends">
+            <span
+              class="author"
+              v-for="(author, index) in model.authors"
+              :key="index"
+            >
+              <a :href="userUrl(author)">{{ author.name }} </a>
+              <span
+                v-show="index != Object.keys(model.authors).length - 1"
+                class="dot-separator"
+              >
+                &bull;
+              </span>
+            </span>
+          </IconText>
+          <IconText
+            v-if="model.happening_next"
+            prefix="fad"
+            iconName="calendar-day"
+          >
+            Next: {{ moment(model.happening_next).format('DD MMMM YYYY') }}
+          </IconText>
         </div>
       </div>
 
       <div class="content">
         {{ model.description }}
       </div>
+      <a
+        v-if="model.sign_up"
+        :href="model.sign_up"
+        class="button is-success is-rounded"
+        >{{ $t('actions.sign-up') }}</a
+      >
     </div>
   </div>
 </template>
@@ -30,6 +58,11 @@ export default {
   computed: {
     repo() {
       return this.model.repo.replace('https://github.com/', '')
+    }
+  },
+  methods: {
+    userUrl(author) {
+      return `https://github.com/${author.github_user}`
     }
   }
 }

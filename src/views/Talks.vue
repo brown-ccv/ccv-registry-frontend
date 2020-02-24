@@ -5,22 +5,26 @@
       v-for="(item, index) in talks.talks"
       :key="index"
       :model="item"
+      category="talk"
     ></Card>
   </div>
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
+import { mapState } from 'vuex'
+import store from '@/store/index'
+import nProgress from 'nprogress'
 
 export default {
   computed: {
     ...mapState(['talks'])
   },
-  mounted() {
-    this.fetchTalks()
-  },
-  methods: {
-    ...mapActions('talks', ['fetchTalks'])
+  beforeRouteEnter(routeTo, routeFrom, next) {
+    nProgress.start()
+    store.dispatch('talks/fetchTalks').then(() => {
+      nProgress.done()
+      next()
+    })
   }
 }
 </script>

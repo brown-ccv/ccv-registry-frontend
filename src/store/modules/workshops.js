@@ -12,7 +12,7 @@ export default {
   },
   actions: {
     fetchWorkshops({ commit }) {
-      GithubService.getData(query('workshops'))
+      return GithubService.getData(query('workshops'))
         .then(response => {
           commit('SET_WORKSHOP_DATA', serialize(response))
         })

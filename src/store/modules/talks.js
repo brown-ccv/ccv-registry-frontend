@@ -12,7 +12,7 @@ export default {
   },
   actions: {
     fetchTalks({ commit }) {
-      GithubService.getData(query('talks'))
+      return GithubService.getData(query('talks'))
         .then(response => {
           commit('SET_TALKS_DATA', serialize(response))
         })

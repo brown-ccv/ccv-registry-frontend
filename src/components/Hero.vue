@@ -1,5 +1,5 @@
 <template>
-  <section class="hero is-dark is-medium">
+  <section class="hero is-light is-medium">
     <div class="hero-body">
       <div class="section-left">
         <h1 class="title">

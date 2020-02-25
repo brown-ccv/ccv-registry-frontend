@@ -12,7 +12,7 @@ export default {
   },
   actions: {
     fetchSoftware({ commit }) {
-      GithubService.getData(query('software'))
+      return GithubService.getData(query('software'))
         .then(response => {
           commit('SET_SOFTWARE_DATA', serialize(response))
         })

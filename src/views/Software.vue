@@ -1,26 +1,34 @@
 <template>
   <div class="section">
-    <h1>{{ $t('main.software') }}</h1>
-    <Card
-      v-for="(item, index) in software.software"
-      :key="index"
-      :model="item"
-    ></Card>
+    <Hero title="Software" :subtitle="$t('description.software')">
+      <HeroImage option="code-review" />
+    </Hero>
+    <CardGroup>
+      <Card
+        v-for="(item, index) in software.software"
+        :key="index"
+        :model="item"
+        category="software"
+      ></Card>
+    </CardGroup>
   </div>
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
+import { mapState } from 'vuex'
+import store from '@/store/index'
+import nProgress from 'nprogress'
 
 export default {
   computed: {
     ...mapState(['software'])
   },
-  mounted() {
-    this.fetchSoftware()
-  },
-  methods: {
-    ...mapActions('software', ['fetchSoftware'])
+  beforeRouteEnter(routeTo, routeFrom, next) {
+    nProgress.start()
+    store.dispatch('software/fetchSoftware').then(() => {
+      nProgress.done()
+      next()
+    })
   }
 }
 </script>

@@ -3,5 +3,14 @@
     "workshops": "Workshops",
     "software": "Software",
     "talks": "Talks"
+  },
+  "description": {
+    "workshops": "Data Science, High-performance computing, Computational Biology workshops and tutorials.",
+    "software": "CCV is commited to open source some of the software we create.",
+    "talks": "We organize talks and conferences. Find below the content of some of these talks."
+  },
+  "actions": {
+    "sign-up": "Sign Up",
+    "learn-more": "Learn More"
   }
 }

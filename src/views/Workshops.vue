@@ -1,28 +1,34 @@
 <template>
   <div class="section">
-    <h1>{{ $t('main.workshops') }}</h1>
+    <Hero title="Workshops" :subtitle="$t('description.workshops')">
+      <HeroImage option="teaching" />
+    </Hero>
     <CardGroup>
       <Card
         v-for="(item, index) in workshops.workshops"
         :key="index"
         :model="item"
+        category="workshop"
       ></Card>
     </CardGroup>
   </div>
 </template>
 
 <script>
-import { mapActions, mapState } from 'vuex'
+import { mapState } from 'vuex'
+import store from '@/store/index'
+import nProgress from 'nprogress'
 
 export default {
   computed: {
     ...mapState(['workshops'])
   },
-  mounted() {
-    this.fetchWorkshops()
-  },
-  methods: {
-    ...mapActions('workshops', ['fetchWorkshops'])
+  beforeRouteEnter(routeTo, routeFrom, next) {
+    nProgress.start()
+    store.dispatch('workshops/fetchWorkshops').then(() => {
+      nProgress.done()
+      next()
+    })
   }
 }
 </script>

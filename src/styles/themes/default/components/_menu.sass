@@ -1,7 +1,22 @@
 .menu-items
     justify-content: center
+    margin-top: 8%
+    position: absolute
+    width: 100%
     @extend .is-flex
+    ///I
+    +desktop
+        margin-top: 34%
 
 .menu-link
-    margin-left: $size-1
+    @extend .is-light
     @extend .button
+    @extend .is-rounded
+    @extend .is-small
+    ///I
+    +tablet
+        font-size: 1rem
+        margin-left: $size-1
+
+.router-link-active
+    @extend .is-dark

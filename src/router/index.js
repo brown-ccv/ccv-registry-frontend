@@ -28,6 +28,18 @@ const routes = [
     name: 'workshop',
     component: Details,
     props: true
+  },
+  {
+    path: '/talk/:slug',
+    name: 'talk',
+    component: Details,
+    props: true
+  },
+  {
+    path: '/software/:slug',
+    name: 'software',
+    component: Details,
+    props: true
   }
 ]
 

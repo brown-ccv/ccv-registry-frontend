@@ -4,6 +4,7 @@
   <Programmer v-else-if="option === 'programmer'" />
   <App v-else-if="option === 'app'" />
   <Teaching v-else-if="option === 'teaching'" />
+  <TeachingCCV v-else-if="option === 'teaching-ccv'" />
 </template>
 
 <script>
@@ -12,6 +13,7 @@ import Presentation from '@/assets/illustrations/undraw/undraw_Presentation.svg'
 import Programmer from '@/assets/illustrations/undraw/undraw_programmer.svg'
 import App from '@/assets/illustrations/undraw/undraw_progressive_app.svg'
 import Teaching from '@/assets/illustrations/undraw/undraw_teaching.svg'
+import TeachingCCV from '@/assets/illustrations/undraw/undraw_teaching_ccv.svg'
 
 export default {
   props: {
@@ -25,7 +27,8 @@ export default {
     Presentation,
     Programmer,
     App,
-    Teaching
+    Teaching,
+    TeachingCCV
   }
 }
 </script>

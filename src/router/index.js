@@ -4,10 +4,16 @@ import Workshops from '@/views/Workshops.vue'
 import Software from '@/views/Software.vue'
 import Talks from '@/views/Talks.vue'
 import Details from '@/views/Details.vue'
+import Index from '@/views/Index.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
+  {
+    path: '/',
+    name: 'index',
+    component: Index
+  },
   {
     path: '/workshops',
     name: 'workshops',

@@ -2,7 +2,9 @@
   "main": {
     "workshops": "Workshops",
     "software": "Software",
-    "talks": "Talks"
+    "talks": "Talks",
+    "heading": "Workshops, Talks, and Open Source Software",
+    "subheading": "We are commited to lower the barrier to technology. Check out our workshops, talks, open source research software, and more."
   },
   "description": {
     "workshops": "Data Science, High-performance computing, Computational Biology workshops and tutorials.",

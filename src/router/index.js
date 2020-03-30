@@ -42,8 +42,8 @@ const routes = [
     props: true
   },
   {
-    path: '/software/:slug',
-    name: 'software',
+    path: '/package/:slug',
+    name: 'package',
     component: Details,
     props: true
   }

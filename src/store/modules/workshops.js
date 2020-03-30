@@ -1,4 +1,4 @@
-import GithubService, { query, serialize } from '@/services/GithubService'
+import GithubService from '@/services/GithubService'
 
 export default {
   namespaced: true,
@@ -12,9 +12,9 @@ export default {
   },
   actions: {
     fetchWorkshops({ commit }) {
-      return GithubService.getData(query('workshops'))
+      return GithubService.getData('workshops')
         .then(response => {
-          commit('SET_WORKSHOP_DATA', serialize(response))
+          commit('SET_WORKSHOP_DATA', response.data)
         })
         .catch(error => {
           console.log(error)

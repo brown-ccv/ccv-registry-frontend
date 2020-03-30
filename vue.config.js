@@ -1,6 +1,6 @@
 module.exports = {
   publicPath:
-    process.env.NODE_ENV === 'production' ? '/ccv-registry-frontend/' : '/',
+    process.env.NODE_ENV === 'development' ? '/ccv-registry-frontend/' : '/',
   pluginOptions: {
     i18n: {
       locale: 'en',
